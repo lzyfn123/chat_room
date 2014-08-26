@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>聊天室</title>
+    <link type="text/css" rel="stylesheet" href="assets/common.css">
+    <link type="text/css" rel="stylesheet" href="assets/chat.css">
+</head>
+<body>
+<div>
+    <div class="message-block">
+        <div class="header">
+            聊天室
+        </div>
+        <ul class="messages-list">
+
+        </ul>
+    </div>
+    <div class="user-reply-block">
+        <div class="header">
+            【输入框】你好 <span class="current-user">搜索</span> ! 你正和 <span class="other-users">斯蒂芬</span> 聊天~
+        </div>
+        <textarea name="message" class="message-input"></textarea>
+        <input type="button" class="btn btn-success send-btn" value="发送"/>
+    </div>
+    <div class="user-list-block">
+        <div class="header">
+            用户列表
+        </div>
+        <ul class="user-list">
+
+        </ul>
+    </div>
+
+    <!--<div id="content">-->
+    <!--<div id="content_show">-->
+    <!--<div id="contents"></div>-->
+    <!--</div>-->
+    <!--<div id="content_saying">-->
+    <!--<div id="toolbar"></div>-->
+    <!--<div id="input_content" contenteditable="true">-->
+    <!--</div>-->
+    <!--<div id="sayingto">你好 <span id="from"></span> ，你正在对 <span id="to"></span> 说</div>-->
+    <!--<div id="say">-->
+    <!--发送-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div id="users_online">-->
+    <!--<div id="usersbar">-->
+    <!--<div id="user_label">-->
+    <!--在线用户-->
+    <!--</div>-->
+    <!--<div id="users_list">-->
+    <!--<ul id="list">-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+</div>
+<div id="ring" style="widht:0px; height:0px;"></div>
+</body>
+<script type="text/javascript" src="assets/jquery.min.js"></script>
+<script type="text/javascript" src="assets/jquery.cookie.js"></script>
+<script type="text/javascript" src="assets/json2.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="assets/chat.js"></script>
+</html>
