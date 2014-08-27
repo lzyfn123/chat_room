@@ -118,3 +118,11 @@ body {
     float: left;
     background: url("bg-image.png");
 }
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}

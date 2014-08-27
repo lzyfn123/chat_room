@@ -30,7 +30,7 @@ jQuery(function ($, window) {
 
     function flushUsers(users) {
         var $user_list = $('.user-list');
-        var users_str = '<li title="双击聊天" onselectstart="javascript:;"><p class="user">所有人</p></li>';
+        var users_str = ''; //'<li title="双击聊天" onselectstart="javascript:;"><p class="user">所有人</p></li>';
         $user_list.empty();
         $.each(users, function (i, user) {
             users_str += '<li title="双击聊天"><p class="user">' + user + '</p></li>'
@@ -143,6 +143,10 @@ jQuery(function ($, window) {
 
     $("#sendBtn").click(function () {
         say();
+    });
+
+    $("#cleanMsg").click(function () {
+        $message_list.empty();
     });
 
     $.cookie('isLogin', true);
