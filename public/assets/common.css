@@ -5,12 +5,13 @@
     color: #333;
 }
 
-body {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    float: left;
-    background: url("bg-image.png");
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul, li {
+    list-style: none;
 }
 
 a {
@@ -20,11 +21,6 @@ a {
 a:hover {
     color: #214161;
     text-decoration: underline;
-}
-
-button {
-    cursor: pointer;
-    border: none;
 }
 
 .btn {
@@ -95,4 +91,30 @@ button {
     border-color: #d01f2d;
 }
 
-/* Big Button Style */
+.rd {
+    color: red;
+}
+
+ul > li {
+    position: relative;
+    width: 100%;
+    float: left;
+    display: block;
+    font-size: 14px;
+    clear: both;
+    background-color: #fefefe;
+    border-bottom: 1px solid #ccc;
+}
+
+ul > li.active, ul > li:focus, ul > li:hover {
+    background-color: #B2CF73;
+    border-bottom: 1px solid #7AA23F;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    float: left;
+    background: url("bg-image.png");
+}
