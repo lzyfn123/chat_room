@@ -30,7 +30,7 @@ jQuery(function ($, window) {
 
     function flushUsers(users) {
         var $user_list = $('.user-list');
-        var users_str = ''; //'<li title="双击聊天" onselectstart="javascript:;"><p class="user">所有人</p></li>';
+        var users_str = '<li title="双击聊天" onselectstart="javascript:;"><p class="user">所有人</p></li>';
         $user_list.empty();
         $.each(users, function (i, user) {
             users_str += '<li title="双击聊天"><p class="user">' + user + '</p></li>'
@@ -135,7 +135,7 @@ jQuery(function ($, window) {
     });
 
     $message_input.keydown(function (e) {
-        if (e.shiftKey && e.which == 13) {
+        if (e.which == 13) {
             say();
             e.preventDefault();
         }

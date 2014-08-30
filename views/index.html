@@ -7,24 +7,24 @@
     <title>聊天室</title>
     <link type="text/css" rel="stylesheet" href="assets/common.css">
     <link type="text/css" rel="stylesheet" href="assets/chat.css">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="/assets/logo-30.png">
 </head>
 <body>
 <div class="container">
     <div class="message-block">
         <div class="header">
-            消息框
             <a class="btn btn-success fr" id="cleanMsg">清空消息</a>
+            消息框
         </div>
         <ul class="message-list">
         </ul>
     </div>
     <div class="user-reply-block">
         <div class="header">
+            <input type="button" id="sendBtn" class="btn btn-success send-btn" value="发送" title="回车可发送消息"/>
             <span class="current-user">搜索</span> 你好! 你正和 <span class="other-users">斯蒂芬</span> 聊天~
         </div>
-        <textarea name="message" class="message-input"></textarea>
-        <input type="button" id="sendBtn" class="btn btn-success send-btn" value="发送"/>
+        <textarea name="message" class="message-input" placeholder="回车可发送消息 "></textarea>
     </div>
     <div class="user-list-block">
         <div class="header">
@@ -34,12 +34,12 @@
 
         </ul>
     </div>
-    <div id="ring" style="widht:0px; height:0px;"></div>
-    <script type="text/javascript" src="assets/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/jquery.cookie.js"></script>
-    <script type="text/javascript" src="assets/json2.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script type="text/javascript" src="assets/chat.js"></script>
 </div>
+<div id="ring" style="widht:0px; height:0px;"></div>
+<script type="text/javascript" src="assets/jquery.min.js"></script>
+<script type="text/javascript" src="assets/jquery.cookie.js"></script>
+<script type="text/javascript" src="assets/json2.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="assets/chat.js"></script>
 </body>
 </html>

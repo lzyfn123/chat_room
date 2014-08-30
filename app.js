@@ -18,6 +18,7 @@ var getCurrentTime = function () {
 };
 
 io.sockets.on('connection', function (socket) {
+
     socket.on('online', function (data) {
         var data = JSON.parse(data);
         //检查是否是已经登录绑定
@@ -49,7 +50,9 @@ io.sockets.on('connection', function (socket) {
         }
         else {
             //对某人说
-            clients[data.to].emit('say', msgData);
+            if (clients[data.to]) {
+                clients[data.to].emit('say', msgData);
+            }
             clients[data.from].emit('say', msgData);
         }
     });
@@ -93,14 +96,14 @@ app.configure('development', function () {
 });
 
 app.get('/', function (req, res, next) {
-    if (!req.headers.cookie) {
+    if (!req.headers['cookie']) {
         res.redirect('/signin');
         return;
     }
     var cookies = req.headers.cookie.split("; ");
     var isSign = false;
     for (var i = 0; i < cookies.length; i++) {
-        cookie = cookies[i].split("=");
+        var cookie = cookies[i].split("=");
         if (cookie[0] == "user" && cookie[1] != "") {
             isSign = true;
             break;
